@@ -1,0 +1,12 @@
+---
+metadata:
+  name: "Check ec2 instance has availability zone"
+  id: "CKV2_AWS_1001"
+  category: "GENERAL_SECURITY"
+definition:
+  cond_type: "attribute"
+  resource_type:
+    -  "aws_instance"
+  attribute: "availability_zone"
+  operator: "exists"
+

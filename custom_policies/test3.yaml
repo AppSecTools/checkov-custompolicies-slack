@@ -1,0 +1,11 @@
+---
+metadata:
+  id: "CKV2_AWS_1003"
+  name: "Ensure EC2 instances have an 'owner' tag with a value"
+  category: "GENERAL_SECURITY"
+definition:
+  cond_type: "attribute"
+  resource_type:
+    - "aws_instance"
+  attribute: "tags.owner"
+  operator: "exists"

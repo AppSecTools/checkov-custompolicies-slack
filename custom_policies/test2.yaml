@@ -1,0 +1,12 @@
+---
+metadata:
+  name: "ec2 instance requires instance type"
+  id: "CKV2_AWS_1002"
+  category: "GENERAL SECURITY"
+definition:
+  cond_type: "attribute"
+  resource_type:
+    -  "aws_instance"
+  attribute: "instance_type"
+  operator: "exists"
+

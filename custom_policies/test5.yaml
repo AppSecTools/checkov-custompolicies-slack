@@ -1,0 +1,17 @@
+---
+metadata:
+  id: "CKV2_AWS_1005"
+  name: "Ensure EC2 Instances have a volume type of standard, gp2, gp3, and io1"
+  category: "GENERAL_SECURITY"
+definition:
+    cond_type: "attribute"
+    resource_types:
+      - "aws_instance"
+    attribute: "root_block_device.volume_type"
+    operator: "subset"
+    value:
+      - "standard"
+      - "gp2"
+      - "gp3"
+      - "io1"
+
